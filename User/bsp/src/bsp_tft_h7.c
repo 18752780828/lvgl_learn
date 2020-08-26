@@ -34,9 +34,10 @@ typedef uint32_t LCD_COLOR;
 /* ±‰¡ø */
 static LTDC_HandleTypeDef   hltdc_F;
 static DMA2D_HandleTypeDef  hdma2d;
-static uint16_t g_LcdWidth = 480;
-static uint16_t g_LcdHeight = 272;
-static uint8_t g_LcdDirection = 0;
+
+uint16_t g_LcdWidth = 480;
+uint16_t g_LcdHeight = 272;
+uint8_t g_LcdDirection = 0;
 
 uint32_t s_CurrentFrameBuffer;
 uint8_t s_CurrentLayer;

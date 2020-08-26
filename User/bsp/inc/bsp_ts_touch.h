@@ -127,6 +127,7 @@ uint8_t TOUCH_InRect(uint16_t _usX, uint16_t _usY,
 uint16_t _usRectX, uint16_t _usRectY, uint16_t _usRectH, uint16_t _usRectW);
 void TOUCH_Scan(void);
 int32_t TOUCH_Abs(int32_t x);
+void TOUCH_PutKey(uint8_t _ucEvent, uint16_t _usX, uint16_t _usY);
 void TOUCH_CapScan(void);
 void bsp_DetectLcdType(void);
 

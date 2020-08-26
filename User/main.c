@@ -1,6 +1,6 @@
 #include "bsp.h"			 /* 底层硬件驱动 */
 
-extern TOUCH_T g_tTP;
+extern FT5X06_T g_tFT5X06;
 
 static void lv_port_init(void);
 
@@ -29,23 +29,7 @@ int main(void)
 	
 	bsp_StartAutoTimer(0, 200); /* 启动1个200ms的自动重装的定时器，软件定时器0 */
 	
-	lv_obj_t * scr = lv_obj_create(NULL, NULL);
-	lv_scr_load(scr);	
-	
-	/*Create 2 buttons*/
-	lv_obj_t * btn1 = lv_btn_create(scr, NULL); /*Create a button on the screen*/
-	lv_btn_set_fit(btn1, true); /*Enable to automatically set the size according to the content*/
-	lv_obj_set_pos(btn1, 60, 40); /*Set the position of the button*/
-	
-	lv_obj_t * btn2 = lv_btn_create(scr, btn1); /*Copy the first button*/
-	lv_obj_set_pos(btn2, 180, 80); /*Set the position of the button*/
-	
-	/*Add labels to the buttons*/
-	lv_obj_t * label1 = lv_label_create(btn1, NULL); /*Create a label on the first button*/
-	lv_label_set_text(label1, "exit"); /*Set the text of the label*/
-	lv_obj_t * label2 = lv_label_create(btn2, NULL); /*Create a label on the second button*/
-	lv_label_set_text(label2, "enter"); /*Set the text of the label*/
-	
+	lvgl_obj_test();	
 	/* 进入主程序循环体 */
 	fRefresh = 1;	
 	while (1)
@@ -73,9 +57,9 @@ static void my_flush_cb(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_col
 
 static bool my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
 {
-	TOUCH_Scan();	/* 触摸屏 */
-	data->point.x = g_tTP.usAdcNowX;
-	data->point.y = g_tTP.usAdcNowY;
+	FT5X06_Scan();	/* 触摸屏 */
+	data->point.x = g_tFT5X06.X[0];
+	data->point.y = g_tFT5X06.Y[0];
 	data->state = LV_INDEV_STATE_REL;
 	return false; /*No buffering now so no more data read*/
 }

@@ -68,26 +68,14 @@
 #define NVIC_PREEMPT_PRIORITY	4
 
 /* 通过取消注释或者添加注释的方式控制是否包含底层驱动模块 */
-//#include "bsp_msg.h"
-//#include "bsp_user_lib.h"
 #include "bsp_timer.h"
 #include "bsp_led.h"
 #include "bsp_key.h"
 #include "bsp_dwt.h"
 #include "lvgl.h"
-
-//#include "bsp_cpu_rtc.h"
-//#include "bsp_cpu_adc.h"
-//#include "bsp_cpu_dac.h"
 #include "bsp_uart_fifo.h"
-//#include "bsp_uart_gps.h"
-//#include "bsp_uart_esp8266.h"
-//#include "bsp_uart_sim800.h"
 
 #include "bsp_fmc_sdram.h"
-//#include "bsp_fmc_nand_flash.h"
-//#include "bsp_fmc_ad7606.h"
-//#include "bsp_fmc_oled.h"
 #include "bsp_fmc_io.h"
 
 #include "bsp_i2c_gpio.h"
@@ -95,20 +83,14 @@
 
 #include "bsp_tft_h7.h"
 #include "bsp_tft_429.h"
-//#include "bsp_tft_lcd.h"
+
 #include "bsp_ts_touch.h"
-#include "bsp_ts_stmpe811.h"
+#include "bsp_ts_ft5x06.h"
 
 #include "bsp_beep.h"
 #include "bsp_tim_pwm.h"
-//#include "bsp_sdio_sd.h"
-//#include "bsp_dht11.h"
-//#include "bsp_ds18b20.h"
-//#include "bsp_ps2.h"
-//#include "bsp_ir_decode.h"
-//#include "bsp_camera.h"
-//#include "bsp_rs485_led.h"
-//#include "bsp_can.h"
+
+#include "lvgl_obj_exp.h"
 
 /* 提供给其他C文件调用的函数 */
 void bsp_Init(void);

@@ -154,33 +154,42 @@ void FT5X06_Scan(void)
 		return;
 	}
 	
-	/* 10ms 执行一次 */
-	if (g_tFT5X06.TimerCount < 10)
-	{
-		return;
-	}
+//	/* 10ms 执行一次 */
+//	if (g_tFT5X06.TimerCount < 10)
+//	{
+//		return;
+//	}
 
-	g_tFT5X06.TimerCount = 0;
+//	g_tFT5X06.TimerCount = 0;
 
 #if 1	/* 方案1: 检测INT引脚电平. */
 	if (TOUCH_PenInt() == 0)
-	{	
+	{		
 #else	/* 方案2：不用INT引脚，读状态寄存器 */		
 	FT5X06_ReadReg(2, buf, 1);		
 	if ((buf[0] & 0x07) == 0)
 	{
 #endif		
 		/* 持续按下时，INT电平是脉冲信号。每隔18ms出现1个宽度4ms的高电平。 */
-		if (s_tp_down == 1)
-		{
-			if (++s_count > 2)
-			{
-				s_count = 0;
-				s_tp_down = 0;
-				//TOUCH_PutKey(TOUCH_RELEASE, x_save, y_save);
-			}
-		}
+//		if (s_tp_down == 1)
+//		{
+//			if (++s_count > 2)
+//			{
+//				s_count = 0;
+//				s_tp_down = 0;
+//				TOUCH_PutKey(TOUCH_RELEASE, x_save, y_save);
+//			}
+//		}
+//		return;
+		FT5X06_ReadReg(0, buf, CFG_POINT_READ_BUF);
+		g_tFT5X06.X[0] = (int16_t)(buf[3] & 0x0F)<<8 | (int16_t)buf[4];
+        g_tFT5X06.Y[0] = (int16_t)(buf[5] & 0x0F)<<8 | (int16_t)buf[6];
 		return;
+		
+	}
+	else
+	{
+		return ;
 	}
 	s_count = 0;
 	
@@ -267,11 +276,11 @@ void FT5X06_Scan(void)
 	{
 		s_tp_down = 1;
 		
-		//TOUCH_PutKey(TOUCH_DOWN, x, y);
+		TOUCH_PutKey(TOUCH_DOWN, x, y);
 	}
 	else
 	{
-		//TOUCH_PutKey(TOUCH_MOVE, x, y);
+		TOUCH_PutKey(TOUCH_MOVE, x, y);
 	}
 	x_save = x;	/* 保存坐标，用于释放事件 */
 	y_save = y;

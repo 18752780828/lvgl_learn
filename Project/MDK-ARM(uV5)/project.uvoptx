@@ -125,7 +125,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U53FF6A064966545017200587 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("") -D00(00000000) -L00(0) -TO18 -TC10000000 -TP21 -TDS8000 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32H7x_2048.FLM -FS08000000 -FL0200000 -FP0($$Device:STM32H743XIHx$CMSIS\Flash\STM32H7x_2048.FLM)</Name>
+          <Name>-U53FF6A064966545017200587 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8000 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32H7x_2048.FLM -FS08000000 -FL0200000 -FP0($$Device:STM32H743XIHx$CMSIS\Flash\STM32H7x_2048.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -153,7 +153,24 @@
           <Name></Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>31</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134345454</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\User\lvgl_exp\lvgl_obj_exp.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\output\../../User/lvgl_exp/lvgl_obj_exp.c\31</Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -194,6 +211,11 @@
           <count>7</count>
           <WinNumber>1</WinNumber>
           <ItemText>_Continue</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>buf</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>
@@ -246,12 +268,6 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
-      <SystemViewers>
-        <Entry>
-          <Name>System Viewer\DMA1</Name>
-          <WinId>35905</WinId>
-        </Entry>
-      </SystemViewers>
       <DebugDescription>
         <Enable>0</Enable>
         <EnableFlashSeq>0</EnableFlashSeq>
@@ -463,8 +479,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\User\bsp\src\bsp_ts_stmpe811.c</PathWithFileName>
-      <FilenameWithoutPath>bsp_ts_stmpe811.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\User\bsp\src\bsp_i2c_gpio.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_i2c_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -475,8 +491,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\User\bsp\src\bsp_i2c_gpio.c</PathWithFileName>
-      <FilenameWithoutPath>bsp_i2c_gpio.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\User\bsp\src\bsp_i2c_eeprom_24xx.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_i2c_eeprom_24xx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -487,8 +503,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\User\bsp\src\bsp_i2c_eeprom_24xx.c</PathWithFileName>
-      <FilenameWithoutPath>bsp_i2c_eeprom_24xx.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\User\bsp\src\bsp_ts_ft5x06.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_ts_ft5x06.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -2121,6 +2137,26 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Libraries\lvgl\src\lv_widgets\lv_win.c</PathWithFileName>
       <FilenameWithoutPath>lv_win.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>lvgl_exp</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>147</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\lvgl_exp\lvgl_obj_exp.c</PathWithFileName>
+      <FilenameWithoutPath>lvgl_obj_exp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

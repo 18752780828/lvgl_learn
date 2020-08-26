@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER, STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User\bsp\inc;..\..\User;..\..\User\bsp;..\..\User\fonts;..\..\Libraries\lvgl</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User\bsp\inc;..\..\User;..\..\User\bsp;..\..\User\fonts;..\..\Libraries\lvgl;..\..\User\lvgl_exp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,11 +463,6 @@
               <FilePath>..\..\User\bsp\src\bsp_ts_touch.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_ts_stmpe811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\bsp\src\bsp_ts_stmpe811.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_i2c_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\bsp\src\bsp_i2c_gpio.c</FilePath>
@@ -476,6 +471,11 @@
               <FileName>bsp_i2c_eeprom_24xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\bsp\src\bsp_i2c_eeprom_24xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_ts_ft5x06.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\bsp\src\bsp_ts_ft5x06.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1176,6 +1176,16 @@
               <FileName>lv_win.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\lvgl\src\lv_widgets\lv_win.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>lvgl_exp</GroupName>
+          <Files>
+            <File>
+              <FileName>lvgl_obj_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_obj_exp.c</FilePath>
             </File>
           </Files>
         </Group>
