@@ -153,6 +153,7 @@
           <Name></Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+<<<<<<< HEAD
       <Breakpoint>
         <Bp>
           <Number>0</Number>
@@ -171,16 +172,27 @@
           <Expression>\\output\../../User/lvgl_exp/lvgl_obj_exp.c\31</Expression>
         </Bp>
       </Breakpoint>
+=======
+      <Breakpoint/>
+>>>>>>> 008184c... touch done
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD
           <ItemText>hnucleo_Adc</ItemText>
+=======
+          <ItemText>buf</ItemText>
+>>>>>>> 008184c... touch done
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD
           <ItemText>aa</ItemText>
+=======
+          <ItemText>data</ItemText>
+>>>>>>> 008184c... touch done
         </Ww>
         <Ww>
           <count>2</count>
@@ -280,7 +292,11 @@
 
   <Group>
     <GroupName>User</GroupName>
+<<<<<<< HEAD
     <tvExp>0</tvExp>
+=======
+    <tvExp>1</tvExp>
+>>>>>>> 008184c... touch done
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

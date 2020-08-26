@@ -149,6 +149,7 @@ void FT5X06_Scan(void)
 	static uint16_t x_save, y_save;
 	static uint8_t s_count = 0;	
 
+<<<<<<< HEAD
 	if (g_tFT5X06.Enable == 0)
 	{
 		return;
@@ -301,6 +302,25 @@ void FT5X06_Scan(void)
 	printf("(%5d,%5d,%3d,%3d) ",  g_tFT5X06.X[4], g_tFT5X06.Y[4], g_tFT5X06.Event[4],  g_tFT5X06.id[4]);
 	printf("\r\n");
 #endif	
+=======
+	g_tTP.XBuf[0] = 0;
+	g_tTP.YBuf[0] = 0;
+
+	if (TOUCH_PenInt() == 1)
+	{
+//		  if (++s_tp_down > 2)
+			{
+				s_tp_down = 0;
+				FT5X06_ReadReg(0, buf, CFG_POINT_READ_BUF);
+				g_tTP.YBuf[0] = (int16_t)(buf[3] & 0x0F)<<8 | (int16_t)buf[4];
+				g_tTP.XBuf[0] = (int16_t)(buf[5] & 0x0F)<<8 | (int16_t)buf[6];
+			}
+	}
+	else
+	{
+			s_tp_down = 0;
+	}
+>>>>>>> 008184c... touch done
 }
 
 /*

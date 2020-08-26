@@ -327,7 +327,11 @@ void bsp_RunPer10ms(void)
 */
 void bsp_RunPer1ms(void)
 {
+<<<<<<< HEAD
 //	TOUCH_Scan();	/* 触摸屏 */
+=======
+	TOUCH_Scan();	/* 触摸屏 */
+>>>>>>> 008184c... touch done
 	lv_tick_inc(1);
 }
 
@@ -350,6 +354,11 @@ void bsp_Idle(void)
 	//GUI_Exec();
 
 	/* 例如 uIP 协议，可以插入uip轮询函数 */
+<<<<<<< HEAD
+=======
+	//TOUCH_CapScan();
+
+>>>>>>> 008184c... touch done
 }
 
 /*

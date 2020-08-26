@@ -1,6 +1,10 @@
 #include "bsp.h"			 /* 底层硬件驱动 */
 
+<<<<<<< HEAD
 extern FT5X06_T g_tFT5X06;
+=======
+extern TOUCH_T g_tTP;
+>>>>>>> 008184c... touch done
 
 static void lv_port_init(void);
 
@@ -24,7 +28,11 @@ int main(void)
 	lv_port_init();
 	/* 界面整体显示完毕后，再打开背光，设置为缺省亮度 */
 	bsp_DelayMS(100); 
+<<<<<<< HEAD
 	ucBright = 125;
+=======
+	ucBright = 200;
+>>>>>>> 008184c... touch done
 	LCD_SetPwmBackLight(ucBright);
 	
 	bsp_StartAutoTimer(0, 200); /* 启动1个200ms的自动重装的定时器，软件定时器0 */
@@ -58,9 +66,15 @@ static void my_flush_cb(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_col
 static bool my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
 {
 	FT5X06_Scan();	/* 触摸屏 */
+<<<<<<< HEAD
 	data->point.x = g_tFT5X06.X[0];
 	data->point.y = g_tFT5X06.Y[0];
 	data->state = LV_INDEV_STATE_REL;
+=======
+	data->point.x = g_tTP.XBuf[0];
+	data->point.y = g_tTP.YBuf[0];
+	data->state = LV_INDEV_STATE_PR;
+>>>>>>> 008184c... touch done
 	return false; /*No buffering now so no more data read*/
 }
 
