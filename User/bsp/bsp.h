@@ -91,6 +91,7 @@
 #include "bsp_tim_pwm.h"
 
 #include "lvgl_obj_exp.h"
+#include "lvgl_btn_exp.h"
 
 /* 提供给其他C文件调用的函数 */
 void bsp_Init(void);

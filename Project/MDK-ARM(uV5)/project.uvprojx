@@ -1187,6 +1187,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\lvgl_exp\lvgl_obj_exp.c</FilePath>
             </File>
+            <File>
+              <FileName>lvgl_btn_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_btn_exp.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

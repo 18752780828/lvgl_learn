@@ -29,7 +29,8 @@ int main(void)
 	
 	bsp_StartAutoTimer(0, 200); /* 启动1个200ms的自动重装的定时器，软件定时器0 */
 	
-	lvgl_obj_test();	
+//	lvgl_btn_test();	
+	lvgl_obj_test();
 	/* 进入主程序循环体 */
 	fRefresh = 1;	
 	while (1)
@@ -60,8 +61,17 @@ static bool my_input_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
 	FT5X06_Scan();	/* 触摸屏 */
 	data->point.x = g_tTP.XBuf[0];
 	data->point.y = g_tTP.YBuf[0];
-	data->state = LV_INDEV_STATE_PR;
-	return false; /*No buffering now so no more data read*/
+	
+	if (g_tTP.usMaxAdc == 0)
+	{
+		data->state = LV_INDEV_STATE_PR; /*No buffering now so no more data read*/		
+	}
+	else
+	{
+		data->state = LV_INDEV_STATE_REL;
+	}
+	
+	return false;
 }
 
 static void lv_port_init(void)

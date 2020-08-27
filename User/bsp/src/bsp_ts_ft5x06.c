@@ -144,28 +144,34 @@ void FT5X06_Scan(void)
 {
 	uint8_t buf[CFG_POINT_READ_BUF];
 	uint8_t i;
-	static uint8_t s_tp_down = 0;
+	static int8_t s_tp_down = 0;
 	uint16_t x, y;
 	static uint16_t x_save, y_save;
 	static uint8_t s_count = 0;	
 
-	g_tTP.XBuf[0] = 0;
-	g_tTP.YBuf[0] = 0;
-
 	if (TOUCH_PenInt() == 1)
 	{
-//		 if (++s_tp_down > 2)
-		{
-			s_tp_down = 0;
-			FT5X06_ReadReg(0, buf, CFG_POINT_READ_BUF);
-			g_tTP.YBuf[0] = (int16_t)(buf[3] & 0x0F)<<8 | (int16_t)buf[4];
-			g_tTP.XBuf[0] = (int16_t)(buf[5] & 0x0F)<<8 | (int16_t)buf[6];
-		}
-}
+		FT5X06_ReadReg(0, buf, CFG_POINT_READ_BUF);
+		g_tTP.YBuf[0] = (int16_t)(buf[3] & 0x0F)<<8 | (int16_t)buf[4];
+		g_tTP.XBuf[0] = (int16_t)(buf[5] & 0x0F)<<8 | (int16_t)buf[6];
+		s_tp_down++;
+	}
 	else
 	{
-			s_tp_down = 0;
+		s_tp_down--;	
 	}
+
+	if (s_tp_down <= -2)
+	{
+		s_tp_down = 0;
+		g_tTP.usMaxAdc = 1;
+	}
+	else if (s_tp_down >= 2)
+	{
+		s_tp_down = 0;
+		g_tTP.usMaxAdc = 0;
+	}
+
 }
 
 /*
