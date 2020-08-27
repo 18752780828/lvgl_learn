@@ -28,5 +28,11 @@ void lvgl_obj_test(void)
 	obj3 = lv_obj_create(lv_scr_act(), obj2);
 	lv_obj_add_style(obj3, LV_OBJ_PART_MAIN, &style_shadow);
 	lv_obj_align(obj3, NULL, LV_ALIGN_CENTER, 60, 30);	
+	
+	lv_obj_t * obj4;
+	obj4 = lv_obj_create(obj3, obj3);
+	lv_obj_set_size(obj4, 50, 30);
+	lv_obj_align(obj4, NULL, LV_ALIGN_CENTER, 0, 0);	
+
 }
 

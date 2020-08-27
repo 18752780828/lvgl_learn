@@ -387,6 +387,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\main.c</FilePath>
             </File>
+            <File>
+              <FileName>lvgl_port_register.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_port_register.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1191,6 +1196,11 @@
               <FileName>lvgl_btn_exp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\lvgl_exp\lvgl_btn_exp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lvgl_arc_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_arc_exp.c</FilePath>
             </File>
           </Files>
         </Group>
