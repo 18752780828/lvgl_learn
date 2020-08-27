@@ -26,9 +26,11 @@ int main(void)
 	
 //	lvgl_btn_test();	
 //	lvgl_obj_test();
-	lv_ex_arc_1();
+//	lv_ex_arc_1();
 //	lv_ex_arc_2();
-	
+//	lv_ex_bar_1();
+//	lv_ex_btnmatrix_1();
+	lv_ex_calendar_1();
 	while (1)
 	{
 		bsp_DelayMS(5); 

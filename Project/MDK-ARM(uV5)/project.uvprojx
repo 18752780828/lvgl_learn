@@ -1202,6 +1202,21 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\lvgl_exp\lvgl_arc_exp.c</FilePath>
             </File>
+            <File>
+              <FileName>lvgl_bar_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_bar_exp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lvgl_btnmatrix_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_btnmatrix_exp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lvgl_calendar_exp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lvgl_exp\lvgl_calendar_exp.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
