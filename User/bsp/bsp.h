@@ -91,12 +91,22 @@
 #include "bsp_tim_pwm.h"
 
 #include "lvgl_port_register.h"
-#include "lvgl_obj_exp.h"
-#include "lvgl_arc_exp.h"
-#include "lvgl_bar_exp.h"
-#include "lvgl_btn_exp.h"
-#include "lvgl_btnmatrix_exp.h"
-#include "lvgl_calendar_exp.h"
+//#include "lvgl_obj_exp.h"
+//#include "lvgl_arc_exp.h"
+//#include "lvgl_bar_exp.h"
+//#include "lvgl_btn_exp.h"
+//#include "lvgl_btnmatrix_exp.h"
+//#include "lvgl_calendar_exp.h"
+//#include "lvgl_canvas_exp.h"
+//#include "lvgl_checkbox_exp.h"
+//#include "lvgl_chart_exp.h"
+//#include "lvgl_ddlist_exp.h"
+//#include "lvgl_objmask_exp.h"
+//#include "lvgl_page_exp.h"
+//#include "lvgl_spinbox_exp.h"
+//#include "lvgl_table_exp.h"
+//#include "lvgl_titeview_exp.h"
+#include "lvgl_window_exp.h"
 
 /* 提供给其他C文件调用的函数 */
 void bsp_Init(void);

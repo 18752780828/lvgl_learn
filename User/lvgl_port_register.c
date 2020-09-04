@@ -49,8 +49,7 @@ void lv_port_init(void)
 	lv_disp_drv_init(&disp_drv); /*Basic initialization*/
 	disp_drv.buffer = &disp_buf; /*Set an initialized buffer*/
 	disp_drv.flush_cb = my_flush_cb; /*Set a flush callback to draw to the display*/
-	lv_disp_t * disp;
-	disp = lv_disp_drv_register(&disp_drv); /*Register the driver and save the created display objects*/
+	lv_disp_drv_register(&disp_drv); /*Register the driver and save the created display objects*/
 	
 	lv_indev_drv_t indev_drv;
 	lv_indev_drv_init(&indev_drv); /*Basic initialization*/

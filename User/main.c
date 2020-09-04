@@ -30,7 +30,17 @@ int main(void)
 //	lv_ex_arc_2();
 //	lv_ex_bar_1();
 //	lv_ex_btnmatrix_1();
-	lv_ex_calendar_1();
+//	lv_ex_calendar_1();
+//	lv_ex_canvas_2();
+//	lv_ex_checkbox_1();
+//	lv_ex_chart_2();
+//	lv_ex_dropdown_2();
+//	lv_ex_objmask_1();
+//	lv_ex_page_1();
+//	lv_ex_spinbox_1();
+//	lv_ex_table_1();
+//	lv_ex_tileview_1();
+	lv_ex_win_1();
 	while (1)
 	{
 		bsp_DelayMS(5); 
